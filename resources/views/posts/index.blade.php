@@ -1,4 +1,4 @@
-@extends('layouts/base')
+@extends('layouts.base')
 
 @section('content')
 	<div class="container mt-5">
@@ -25,7 +25,7 @@
 											<img src="{{ asset('/storage/posts/' . $post->image) }}" class="rounded img-fluid post-content-img">
 										</td>
 										<td class="text-center">
-											<form onsubmit="return confirm('Apakah Anda Yakin ?');"
+											<form onsubmit="return confirm('Apakah Anda Yakin menghapus data ini ?');"
 												action="{{ route('posts.destroy', $post->id) }}" method="POST">
 												<a href="{{ route('posts.show', $post->id) }}"
 													class="btn btn-sm btn-dark">SHOW</a>
